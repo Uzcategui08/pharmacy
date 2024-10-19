@@ -1,0 +1,75 @@
+/* Estilo básico para la tabla */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+}
+
+.table th, .table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+/* Encabezado de la tabla */
+.table thead {
+  background-color: #f8f9fa; /* Color de fondo claro */
+}
+
+.table th {
+  font-weight: bold;
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+  .table {
+      display: block;
+      width: 100%; /* Asegurar que la tabla ocupe todo el ancho */
+      overflow-x: auto; /* Permitir desplazamiento horizontal */
+      white-space: nowrap; /* Evitar que el texto se divida */
+  }
+
+  .table thead {
+      display: none; /* Ocultar encabezados en vista móvil */
+  }
+
+  .table tr {
+      display: flex; /* Usar Flexbox para las filas */
+      flex-wrap: wrap; /* Permitir que las columnas se envuelvan */
+      margin-bottom: 20px; /* Espaciado entre filas */
+      border: 1px solid #ddd; /* Añadir borde a las filas */
+      border-radius: 5px; /* Bordes redondeados para un mejor aspecto */
+      padding: 15px; /* Espaciado interno */
+      background-color: #fff; /* Fondo blanco para las filas */
+      width: 100%; /* Asegurar que las filas ocupen todo el ancho */
+  }
+
+  .table td {
+      flex: 0 0 50%; /* Cada columna ocupará el 50% del ancho */
+      max-width: 50%; /* Asegurar que cada columna no exceda el 50% */
+      text-align: left; /* Alinear texto a la izquierda */
+      position: relative;
+      padding: 10px 10px 10px 100px; /* Aumentar relleno izquierdo para el pseudo-elemento */
+      border: none; /* Eliminar bordes de las celdas */
+  }
+
+  .table td::before {
+      content: attr(data-label) ": "; /* Mostrar el nombre de la columna seguido de dos puntos */
+      position: absolute;
+      left: 10px;
+      font-weight: bold;
+      color: #6c757d; /* Color gris para el texto de los encabezados */
+  }
+
+  .table td[data-label="Acciones"] {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .table td[data-label="Acciones"] a,
+  .table td[data-label="Acciones"] form {
+      margin-right: 5px; /* Espaciado entre los botones */
+  }
+}

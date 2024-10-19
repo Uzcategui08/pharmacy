@@ -1,0 +1,175 @@
+:root {
+    --color-morado: #161D6E;
+    --color-azul: #1160AA;
+    --color-celeste: #9BB4DA;
+    --color-claro: #eae9da;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background: linear-gradient(to right, var(--color-morado), var(--color-azul), var(--color-celeste), var(--color-claro));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: -20px 0 50px;
+}
+
+.form-control.is-invalid {
+    border-color: #dc3545; /* Color del borde para inputs inválidos */
+}
+
+.invalid-feedback {
+    display: block; /* Asegúrate de que el mensaje esté visible */
+    background-color: #f8d7da; /* Fondo del mensaje de error */
+    color: #721c24; /* Color del texto del mensaje de error */
+    border: 1px solid #f5c6cb; /* Borde del mensaje de error */
+    border-radius: .25rem; /* Bordes redondeados */
+    padding: .75rem 1.25rem; /* Espaciado interno */
+    margin-top: .5rem; /* Margen superior */
+    font-size: .875rem; /* Tamaño de fuente */
+}
+
+h1 {
+    font-weight: bold;
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin: 20px 0 30px;
+}
+
+span {
+    font-size: 12px;
+}
+
+a {
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 15px 0;
+}
+
+button {
+    border-radius: 20px;
+    border: 1px solid var(--color-morado);
+    background-color: var(--color-morado);
+    color: var(--color-claro);
+    font-size: 14px; /* Aumentar tamaño del texto del botón */
+    font-weight: bold;
+    padding: 12px 30px; /* Ajustar el padding */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button:focus {
+    outline: none;
+}
+
+button.ghost {
+    background-color: transparent;
+    border-color: var(--color-claro);
+}
+
+form {
+    background-color: var(--color-claro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px; /* Aumentar padding para más espacio interno */
+    height: 100%;
+    text-align: center;
+}
+
+input {
+    background-color: #eee;
+    border: 1px solid #ddd; /* Añadir borde para inputs */
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 100%;
+    border-radius: .25rem; /* Bordes redondeados para inputs */
+}
+
+/* Formulario estático (sin overlay) */
+.custom-container {
+    background-color: var(--color-claro);
+    border-radius: 10px;
+    box-shadow: none; /* Sin sombras adicionales */
+    position: relative;
+    width: 100%;
+    max-width: 900px; /* Ancho máximo del contenedor */
+    min-height: 600px;
+    padding: 20px;
+}
+
+.custom-form-container {
+    background-color: transparent;
+    position: relative;
+    width: 100%;
+    padding: 0;
+}
+
+.custom-form-container h1 {
+    text-align: center;
+}
+
+.custom-form {
+    background-color: var(--color-claro);
+    box-shadow: none; /* Evitar sombras en el formulario */
+    width: 100%;
+    padding: 20px;
+    border: none; /* Sin bordes adicionales */
+}
+
+.custom-input {
+    background-color: #eee;
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 100%;
+    border-radius: .25rem;
+}
+
+.custom-button {
+    border-radius: 20px;
+    border: 1px solid var(--color-morado);
+    background-color: var(--color-morado);
+    color: var(--color-claro);
+    font-size: 14px;
+    font-weight: bold;
+    padding: 12px 30px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+}
+
+.custom-button:active {
+    transform: scale(0.95);
+}
+
+.custom-button:focus {
+    outline: none;
+}
